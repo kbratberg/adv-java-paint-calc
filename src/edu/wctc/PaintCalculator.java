@@ -17,7 +17,7 @@ public class PaintCalculator {
         keyboard = new Scanner(System.in);
 
         int option = 0;
-
+f
         while (option != 5) {
             printMenu();
 
