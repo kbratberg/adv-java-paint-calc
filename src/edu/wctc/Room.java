@@ -3,6 +3,9 @@ package edu.wctc;
 import java.util.ArrayList;
 
 public class Room {
+    private static int roomCount;
+    private int roomNum;
+
 
     private ArrayList<Wall> wallList;
 
@@ -17,6 +20,8 @@ public class Room {
         wallList.add(wallC);
         Wall wallD = new Wall(width, height);
         wallList.add(wallD);
+        roomCount++;
+        roomNum = roomCount;
     }
 
     public double getArea() {
@@ -28,5 +33,10 @@ public class Room {
         }
 
         return area;
+    }
+
+    public String toString()
+    {
+       return ("The area of room number: " + roomNum + " is " + getArea());
     }
 }
